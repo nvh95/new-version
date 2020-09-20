@@ -26,7 +26,7 @@ npm run new-version
 
 or simply
 ```bash
-node ./node_modules/new-version/.bin/new-version
+node ./node_modules/.bin/new-version
 ```
 ### Using Node API
 

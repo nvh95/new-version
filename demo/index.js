@@ -1,3 +1,3 @@
-const NewVersion = require('../lib');
+const NewVersion = require('../src');
 
 NewVersion.log()
