@@ -1,0 +1,41 @@
+{
+  "name": "new-version",
+  "version": "0.0.1",
+  "description": "A package which is frequently updated to a new version",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-web-module",
+    "clean": "nwb clean-module",
+    "prepublishOnly": "npm run build",
+    "test": "nwb test",
+    "test:coverage": "nwb test --coverage",
+    "test:watch": "nwb test --server"
+  },
+  "bin": {
+    "new-version": "./cli.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "nwb": "0.23.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nvh95/new-version.git"
+  },
+  "keywords": [
+    "package.json",
+    "package-lock.json"
+  ],
+  "author": "nvh95",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nvh95/new-version/issues"
+  },
+  "homepage": "https://github.com/nvh95/new-version#readme"
+}
