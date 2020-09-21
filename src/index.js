@@ -2,7 +2,7 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 // TODO: Automate current version
-const CURRENT_VERSION = '1.0.2';
+const CURRENT_VERSION = '1.0.3';
 
 function getCurrentVersion() {
   return CURRENT_VERSION;
@@ -12,7 +12,7 @@ function getNewestVersion() {
   return new Promise((resolve,reject)=>{
     exec('npm view new-version version')
     .then((result=>{
-      resolve(result.stdout)
+      resolve(result.stdout.trim())
     }))
     .catch(()=>{
       resolve('Cannot find newest version of new-version')

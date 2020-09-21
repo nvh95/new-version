@@ -8,7 +8,7 @@ A package helps you to test if you lock version the right way.
 
 ## Problem
 
-Have you ever in a situation when one of your dependencies get updated, then it breaks your application. Then you try to lock version of that dependency. But it's hard to verify if your method of locking version is correct. `new-version` helps you by regularly update to a new version (now: weekly), so you can verify if you do it the right way.
+Have you ever in a situation when one of your dependencies get updated, then it breaks your application. Then you try to lock version of that dependency. But it's hard to verify if your method of locking version is correct. `new-version` helps you by regularly update to a new version (currently: weekly), so you can verify if you do it the right way.
 
 ## Usage
 You can use node api or cli to check the current and newest version of package
@@ -26,7 +26,7 @@ npm run new-version
 
 or simply
 ```bash
-node ./node_modules/.bin/new-version
+./node_modules/.bin/new-version
 ```
 ### Using Node API
 
@@ -40,6 +40,23 @@ NewVersion.log();
 ```
 Current version:  0.0.1
 Newest version: 0.0.2
+```
+
+## Demo
+You can verify if your locking mechanism is configured correctly by including this script in `index.js`
+```javascript
+// index.js
+import NewVersion from 'new-version'
+
+async function checkVersion() {
+  const currentVersion = NewVersion.getCurrentVersion();
+  const newestVersion = await NewVersion.getNewestVersion();
+  if (currentVersion === newestVersion) {
+    console.warn('You are installing newest package. Ignore if you just install this package within a week. Otherwise, you may want to check if you are locking version correctly')
+  }
+}
+
+checkVersion();
 ```
 
 ### API
