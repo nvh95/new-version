@@ -1,7 +1,8 @@
 # New Version
 
+[npm-badge]: https://img.shields.io/npm/v/new-version.png
+[npm]: https://www.npmjs.org/package/new-version
 <!-- [![Travis][build-badge]][build]
-[![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls] -->
 
 A package helps you to test if you lock version the right way.
