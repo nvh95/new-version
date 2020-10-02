@@ -1,6 +1,6 @@
 {
   "name": "new-version",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A package which is frequently updated to a new version",
   "main": "lib/index.js",
   "module": "es/index.js",
