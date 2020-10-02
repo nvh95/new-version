@@ -2,7 +2,7 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 // TODO: Automate current version
-const CURRENT_VERSION = '1.0.4';
+const CURRENT_VERSION = '1.0.5';
 
 function getCurrentVersion() {
   return CURRENT_VERSION;
